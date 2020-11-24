@@ -8,7 +8,6 @@ body{
     color: #cbc9e2;
     background-color: #3d155f;
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
 }
 
 header, main{
@@ -33,11 +32,11 @@ a{
 }
 
 .welcome{
-    /* max-height: 100vh; */
+    min-height: calc(100vh - 73px);
     margin-top: 0.7em;
 }
 
-.full-name{
+.section-head{
     color: #cbc9e2;
     font-weight: bold;
     position: relative;
@@ -46,7 +45,7 @@ a{
     line-height: 1.4;
 }
 
-.full-name:before {
+.section-head:before {
     content: "";
     position: absolute;
     top: 11px;
@@ -98,7 +97,7 @@ span{
 }
 
 .anchor:hover{
-    color: #cbc9e2;
+    color: #badd76;
 }
 
 .flex p{
@@ -112,81 +111,90 @@ span{
 }
 
 
+.projects{
+    margin: 3.7em 0;
+}
+
+.projects h2{
+    font-size: 18px;
+    margin: 32px 0;
+}
+
+.card-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;;
+}
+
+.card{
+    border: 3px solid #badd76;
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.about{
+    margin: 10px 0;
+}
+.card div{
+    margin-bottom: 10px;
+}
+
+.link-cont a:nth-child(2){
+    margin-left: 40px;
+}
+
+.card a{
+    color: #cbc9e2;
+}
+
+.card a:hover{
+    color: #badd76;
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .welcome{
-        /* max-height: 100vh; */
         margin-top: 3em;
-    }
-    
-    .full-name{
-        font-size: 16px;
-        line-height: 1.4;
-    }
-    
-    .full-name:before {
-        top: 10px;
-        left: 0;
-        width: 52px;
-        height: 2px;
     }
     
     .intro{
         font-size: 50px;
         margin: 0.5em 0;
-        /* width: 50%; */
     }
     
     .pitch{
         font-size: 24px;
         width: 80%;
         line-height: 1.8;
-        margin-bottom: 2em;
-    }
-
-    .anchor:nth-child(2){
-        margin-left: 40px;
-    }
-    
-    .icon{
-        width: 30px;
-        height: 30px;
     }
     
     .flex p{
         font-size: 25px;
-        margin-left: 15px;
     }
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .welcome{
-        /* max-height: 100vh; */
-        /* margin-top: 3em; */
-    }
-    
-    .full-name{
+    .section-head{
         font-size: 24px;
         line-height: 1.4;
     }
     
-    .full-name:before {
+    .section-head:before {
         top: 17px;
     }
     
     .intro{
         font-size: 60px;
-        /* margin: 0.5em 0; */
-        width: 60%;
+        width: 100%;
     }
     
     .pitch{
         font-size: 30px;
         width: 70%;
-        /* line-height: 1.8; */
-        /* margin-bottom: 2em; */
     }
 
     .anchor:nth-child(2){
