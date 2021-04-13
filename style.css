@@ -19,6 +19,7 @@ body{
 
 header{
     height: 100vh;
+    max-height: 60rem;
     margin-top: 2.5rem;
 }
 
@@ -70,14 +71,11 @@ span{
     width: 90%;
 }
 
-.contact-box,
-.contact-box__contact{
+.contact-box{
+    width: 25rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-
-.contact-box__contact:nth-child(2){
-    margin-left: 4rem;
 }
 
 .icon{
@@ -95,13 +93,18 @@ span{
     background-image: url(./assets/email.svg);
 }
 
+.icon--resume{
+    background-image: url(./assets/cv.svg);
+}
+
 .contact-box p{
     color: #cbc9e2;
     margin-left: 1.5rem;
     font-size: 2rem;
 }
 
-.icon--github:hover, .icon--email:hover, .flex p:hover{
+.icon:hover, 
+.flex p:hover{
     filter: brightness(0) saturate(100%) invert(94%) sepia(3%) saturate(5493%) hue-rotate(27deg) brightness(89%) contrast(95%);
 }
 
@@ -115,8 +118,6 @@ span{
 .card-container{
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -169,6 +170,10 @@ span{
         width: 80%;
         line-height: 1.8;
     }
+
+    .contact-box{
+        width: 35rem;
+    }
     
     .contact-box__contact p{
         font-size: 2.5rem;
@@ -204,10 +209,6 @@ span{
     .welcome__pitch{
         font-size: 3rem;
         width: 70%;
-    }
-
-    .contact-box__contact:nth-child(2){
-        margin-left: 9rem;
     }
     
     .icon{
